@@ -81,7 +81,7 @@ export default function CompressPDFPage() {
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <Header />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-blue-600 transition-colors cursor-pointer">Home</Link>
@@ -90,7 +90,7 @@ export default function CompressPDFPage() {
         </nav>
 
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="w-20 h-20 flex items-center justify-center bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl mx-auto mb-6 shadow-lg">
             <i className="ri-compress-line text-white text-3xl"></i>
           </div>
@@ -103,7 +103,7 @@ export default function CompressPDFPage() {
         </div>
 
         {/* Main Content */}
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden max-w-4xl mx-auto">
           {!selectedFile && !downloadUrl && (
             <div className="p-8 md:p-12">
               <FileUpload

@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FileUpload from '@/components/ui/FileUpload';
 import ProgressBar from '@/components/ui/ProgressBar';
-import { mockFileConvert } from '@/lib/mockApi';
+import { mockFileConvert } from '@/lib/mockApi';    
 import Link from 'next/link';
 
 export default function PDFToJPGPage() {
@@ -79,7 +79,7 @@ export default function PDFToJPGPage() {
 
       <Header />
       
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-12">
           <Link href="/" className="hover:text-indigo-600 transition-colors duration-200 cursor-pointer">
@@ -90,7 +90,7 @@ export default function PDFToJPGPage() {
         </nav>
 
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="relative inline-block mb-8">
             <div className="w-32 h-32 flex items-center justify-center bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 rounded-3xl shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
               <i className="ri-image-2-line text-white text-5xl"></i>
@@ -129,7 +129,7 @@ export default function PDFToJPGPage() {
         </div>
 
         {/* Main Conversion Card */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 overflow-hidden mb-16">
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 overflow-hidden mb-16 max-w-4xl mx-auto">
           {!selectedFile && !downloadUrl && (
             <div className="p-12 md:p-16">
               {/* Upload Area */}

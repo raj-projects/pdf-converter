@@ -82,11 +82,13 @@ export default function JpgToPdfPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
       <Header />
-      
+
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-600">
+            Home
+          </Link>
           <span>/</span>
           <span className="text-orange-600">JPG to PDF</span>
         </nav>
@@ -96,9 +98,12 @@ export default function JpgToPdfPage() {
           <div className="w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mx-auto mb-4">
             <i className="ri-image-line text-3xl text-orange-600"></i>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Convert JPG to PDF</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            Convert JPG to PDF
+          </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Transform your JPG images into professional PDF documents instantly. Perfect for creating portfolios, reports, or archiving images.
+            Transform your JPG images into professional PDF documents instantly.
+            Perfect for creating portfolios, reports, or archiving images.
           </p>
         </div>
 
@@ -108,7 +113,7 @@ export default function JpgToPdfPage() {
             {!selectedFile && (
               <>
                 <FileUpload
-                  acceptedTypes={['.jpg', '.jpeg']}
+                  acceptedTypes={[".jpg", ".jpeg"]}
                   onFileSelect={handleFileSelect}
                   maxSize={10}
                   placeholder="Drop your JPG image here"
@@ -121,22 +126,30 @@ export default function JpgToPdfPage() {
                     <div className="w-12 h-12 flex items-center justify-center bg-orange-100 rounded-lg mx-auto mb-3">
                       <i className="ri-file-pdf-line text-xl text-orange-600"></i>
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">High Quality</h3>
-                    <p className="text-sm text-gray-600">Preserves original image quality in PDF format</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      High Quality
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Preserves original image quality in PDF format
+                    </p>
                   </div>
                   <div className="text-center p-4">
                     <div className="w-12 h-12 flex items-center justify-center bg-orange-100 rounded-lg mx-auto mb-3">
                       <i className="ri-shield-check-line text-xl text-orange-600"></i>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Secure</h3>
-                    <p className="text-sm text-gray-600">Files deleted automatically after 24 hours</p>
+                    <p className="text-sm text-gray-600">
+                      Files deleted automatically after 24 hours
+                    </p>
                   </div>
                   <div className="text-center p-4">
                     <div className="w-12 h-12 flex items-center justify-center bg-orange-100 rounded-lg mx-auto mb-3">
                       <i className="ri-flashlight-line text-xl text-orange-600"></i>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Fast</h3>
-                    <p className="text-sm text-gray-600">Convert images in seconds</p>
+                    <p className="text-sm text-gray-600">
+                      Convert images in seconds
+                    </p>
                   </div>
                 </div>
               </>
@@ -146,7 +159,9 @@ export default function JpgToPdfPage() {
               <div className="space-y-6">
                 <div className="bg-orange-50 rounded-xl p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-900">Selected File</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      Selected File
+                    </h3>
                     <button
                       onClick={resetConverter}
                       className="text-gray-500 hover:text-gray-700"
@@ -159,7 +174,9 @@ export default function JpgToPdfPage() {
                       <i className="ri-image-line text-xl text-orange-600"></i>
                     </div>
                     <div className="flex-1">
-                      <p className="font-medium text-gray-900">{selectedFile.name}</p>
+                      <p className="font-medium text-gray-900">
+                        {selectedFile.name}
+                      </p>
                       <p className="text-sm text-gray-600">
                         {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                       </p>
@@ -196,7 +213,9 @@ export default function JpgToPdfPage() {
                   <div className="w-16 h-16 flex items-center justify-center bg-orange-100 rounded-full mx-auto mb-4">
                     <i className="ri-file-transfer-line text-2xl text-orange-600 animate-pulse"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Converting Image</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Converting Image
+                  </h3>
                   <p className="text-gray-600 mb-6">{status}</p>
                 </div>
                 <ProgressBar progress={progress} />
@@ -209,8 +228,12 @@ export default function JpgToPdfPage() {
                   <div className="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mx-auto mb-4">
                     <i className="ri-check-line text-2xl text-green-600"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Conversion Complete!</h3>
-                  <p className="text-gray-600">Your JPG has been converted to PDF successfully.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Conversion Complete!
+                  </h3>
+                  <p className="text-gray-600">
+                    Your JPG has been converted to PDF successfully.
+                  </p>
                 </div>
 
                 <div className="bg-green-50 rounded-xl p-6">
@@ -220,7 +243,9 @@ export default function JpgToPdfPage() {
                         <i className="ri-file-pdf-line text-xl text-red-600"></i>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{convertedFile.name}</p>
+                        <p className="font-medium text-gray-900">
+                          {convertedFile.name}
+                        </p>
                         <p className="text-sm text-gray-600">PDF Document</p>
                       </div>
                     </div>
@@ -249,7 +274,8 @@ export default function JpgToPdfPage() {
                       <i className="ri-information-line text-yellow-600"></i>
                     </div>
                     <p className="text-sm text-yellow-800">
-                      Your files will be automatically deleted after 24 hours for security purposes.
+                      Your files will be automatically deleted after 24 hours
+                      for security purposes.
                     </p>
                   </div>
                 </div>
@@ -266,7 +292,7 @@ export default function JpgToPdfPage() {
                     <p className="text-sm text-red-700">{error}</p>
                   </div>
                   <button
-                    onClick={() => setError('')}
+                    onClick={() => setError("")}
                     className="text-red-500 hover:text-red-700"
                   >
                     <i className="ri-close-line"></i>
