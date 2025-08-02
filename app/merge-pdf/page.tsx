@@ -342,7 +342,7 @@ export default function MergePdfPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Merging Files</h3>
                   <p className="text-gray-600 mb-6">{status}</p>
                 </div>
-                <ProgressBar progress={progress} />
+                <ProgressBar progress={progress} status={status} />
               </div>
             )}
 

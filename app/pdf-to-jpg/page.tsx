@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FileUpload from '@/components/ui/FileUpload';
 import ProgressBar from '@/components/ui/ProgressBar';
-import { mockFileConvert } from '@/lib/mockApi';    
+import { mockFileConversion } from "@/lib/mockApi"; 
 import Link from 'next/link';
 
 export default function PDFToJPGPage() {
@@ -37,10 +37,10 @@ export default function PDFToJPGPage() {
     setError('');
     
     try {
-      const result = await mockFileConvert(
+      const result = await mockFileConversion(
         selectedFile,
-        'jpg',
-        (progress, status) => {
+        "jpg",
+        (progress: number, status: string) => {
           setProgress(progress);
           setStatus(status);
         }
