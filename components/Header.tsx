@@ -30,7 +30,7 @@ export default function Header() {
               <div className="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-lg">
                 <i className="ri-file-pdf-line text-white text-lg"></i>
               </div>
-              <span className="font-['Pacifico'] text-xl text-gray-900">PDFTools</span>
+              <span className="font-['Pacifico'] text-xl text-gray-900">TruePDF</span>
             </Link>
           </div>
 

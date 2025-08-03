@@ -20,7 +20,7 @@ export default function Footer() {
               <div className="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-lg">
                 <i className="ri-file-pdf-line text-white text-lg"></i>
               </div>
-              <span className="font-['Pacifico'] text-xl text-gray-900">PDFTools</span>
+              <span className="font-['Pacifico'] text-xl text-gray-900">TruePDF</span>
             </div>
             <p className="text-gray-600 mb-4 max-w-md">
               Convert, merge, split, and compress your PDF files with our powerful online tools. Fast, secure, and completely free.

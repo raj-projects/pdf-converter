@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ConversionCard from '@/components/ui/ConversionCard';
 import Link from 'next/link';
 
 export default function HomePage() {
