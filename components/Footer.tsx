@@ -68,7 +68,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 text-sm">
-              © 2024 PDFTools. All rights reserved.
+              © {new Date().getFullYear()} PDFTools. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-600 hover:text-blue-600 text-sm transition-colors cursor-pointer">
