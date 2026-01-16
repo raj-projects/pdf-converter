@@ -1,41 +1,51 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
-import "./globals.css";
+import type React from "react"
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import "./globals.css"
 
-const pacifico = Pacifico({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-pacifico',
-})
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const _geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TruePDF Converter",
-  description: "Convert your PDF files to text effortlessly with TruePDF Converter.",
-};
+  title: "PDFLab - Professional PDF Tools & Utilities",
+  description:
+    "Fast, secure PDF tools for merging, splitting, compressing, converting, and processing. Free online PDF utilities with no installation required.",
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans antialiased bg-background text-foreground`}>
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
